@@ -1,0 +1,508 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  height: 800px;
+  overflow: clip;
+  position: relative;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 50%;
+}
+
+div.img > img {
+  width: 70%;
+  height: 100%;
+  transform: rotate(-10deg);
+}
+
+header > div.name {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: flex-start;
+  padding: 75px 75px 75px 125px;
+  background-color: #d7d7d7;
+  height: 800px;
+  justify-content: flex-start;
+}
+
+header > div.nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px 75px;
+  background-color: rgb(0, 0, 0);
+  align-items: normal;
+  flex-direction: column;
+  gap: 10rem;
+  width: 50%;
+  height: 800px;
+  transform: rotate(10deg);
+  position: absolute;
+  top: 0;
+  right: -210px;
+}
+
+div.nav > nav {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  transform: rotate(-10deg);
+}
+
+div.nav > nav > a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  padding: 10px;
+}
+
+div.nav > nav > a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+div.name > div.logo > p {
+  font-size: 2.5rem;
+  color: rgb(0, 0, 0);
+  font-family: "Playwrite NZ Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+div.identification {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 85%;
+}
+
+div.identification > p {
+  font-size: 1.5rem;
+}
+
+div.identification > h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+div.social-networks {
+  display: flex;
+  gap: 25px;
+  margin: 50px 0 0 0;
+}
+
+div.social-networks > a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+  background-color: #c4c4c4;
+  border-radius: 5%;
+}
+
+div.social-networks > a:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+div.aboutme {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 55px 0px 55px 90px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  background-image: url(../assets/images/appel.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+div.aboutme > h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+div.aboutme > p {
+  font-size: 1.5rem;
+  margin: 20px 350px 50px 0;
+}
+
+div.aboutme > button {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-top: unset;
+  border-bottom: unset;
+  border-right: 2px solid rgb(255, 255, 255);
+  border-left: 2px solid rgb(255, 255, 255);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+div.aboutme > button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+}
+
+div.presentation > div.apropos {
+  display: flex;
+  gap: 35px;
+  flex-direction: column;
+  padding: 50px;
+  background-color: #e3e3e3;
+}
+
+div.presentation {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 250px;
+  background-color: #e3e3e3;
+}
+
+div.presentation > div.apropos > section.identification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 50px;
+  font-size: 1.5rem;
+}
+
+div.presentation > div.apropos > section.identification > h2,
+div.presentation > div.skills > h2 {
+  font-size: 2rem;
+}
+
+div.presentation > div.apropos > section.identification > p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+div.presentation > div.apropos > section.identification > button,
+button.btn {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-top: unset;
+  border-bottom: unset;
+  border-right: 2px solid rgb(0, 0, 0);
+  border-left: 2px solid rgb(0, 0, 0);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+div.presentation > div.apropos > section.identification > button:hover,
+button.btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+div.line {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  padding: 50px;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+div.line > hr {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.line > i {
+  background-color: #e3e3e3;
+  font-size: 3rem;
+  position: absolute;
+  top: -15px;
+  right: 46%;
+  padding: 0 25px;
+}
+
+section.others {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 50px;
+}
+
+div.twice {
+  display: flex;
+  gap: 25px;
+}
+
+div.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 25px;
+  width: 50%;
+}
+
+div.carte > div:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+div.carte > div:nth-child(1) > i {
+  font-size: 3rem;
+}
+
+div.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.skills-now {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+div.skills-now > figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 25px;
+  width: 5%;
+}
+
+div.skills-now > figcaption > img {
+  width: 70px;
+  height: 70px;
+}
+
+div.skills-now > figcaption > h4 {
+  font-size: 0.8rem;
+}
+
+div.skills > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 50px;
+}
+
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.burger {
+  display: none;
+}
+
+.burger > span {
+  width: 55px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+}
+
+.burger > span:nth-child(1) {
+  transition: all 0.3s ease-in-out;
+}
+
+.burger > span:nth-child(2) {
+  transition: all 0.3s ease-in-out;
+}
+
+.burger > span:nth-child(3) {
+  transition: all 0.3s ease-in-out;
+}
+
+@media all and (max-width: 1024px) {
+  header {
+    height: unset;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    background-color: transparent;
+    align-items: flex-start;
+  }
+  header > div.name,
+  header > div.nav {
+    width: 100%;
+    height: unset;
+  }
+  header > div.nav {
+    align-items: center;
+    transform: rotate(0deg);
+    position: static;
+    top: unset;
+    right: unset;
+    padding: 30px 30px 0 30px;
+    width: 100%;
+    gap: 30px;
+  }
+  div.nav > nav,
+  div.img > img {
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+  }
+  header > div.name {
+    padding: 60px;
+  }
+  div.nav > nav {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  div.nav > nav.active {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    border: 2px solid #fff;
+    padding: 50px 100px;
+  }
+  div.nav > div.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div.name > div.logo {
+    display: none;
+  }
+}
+
+img.languages {
+  border-radius: 50%;
+}
+
+div.contact {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  background-color: #e3e3e3;
+  gap: 100px;
+}
+
+div.contact > h2 {
+  font-size: 2rem;
+}
+
+div.contact > p {
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+div.contact > h2,
+div.contact > p {
+  text-align: center;
+}
+
+form.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+div.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+div.form > label {
+  font-size: 0.9rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #292929;
+}
+
+div.form > input,
+div.form > textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin: 10px 0;
+  background-color: #e3e3e3;
+  border-bottom: 5px solid #000;
+  border-left: 5px solid #000;
+}
+
+div.form > textarea {
+  resize: none;
+}
+
+form > div {
+  width: 40%;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.form > input:focus,
+div.form > textarea:focus {
+  outline: none;
+  border-bottom: 5px solid #000;
+  border-left: 5px solid #000;
+}
