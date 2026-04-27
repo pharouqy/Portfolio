@@ -14,8 +14,6 @@ body {
   align-items: center;
   max-width: 1440px;
   overflow-x: hidden;
-  border: 2px solid red;
-  z-index: 9999;
 }
 
 header {
@@ -477,6 +475,9 @@ div.skills > section {
   }
   div.skills-now > figcaption {
     width: 30%;
+  }
+  div.presentation > div.apropos > section.identification {
+    padding: 0px;
   }
 }
 
