@@ -14,16 +14,18 @@ body {
   align-items: center;
   max-width: 1440px;
   overflow-x: hidden;
+  border: 2px solid red;
+  z-index: 9999;
 }
 
 header {
   display: flex;
   align-items: center;
-  width: 100%;
   background-color: rgb(0, 0, 0);
   height: 800px;
   overflow: clip;
   position: relative;
+  width: 100%;
 }
 
 header > div {
@@ -52,7 +54,7 @@ header > div.name {
 
 header > div.nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 50px 75px;
   background-color: rgb(0, 0, 0);
   align-items: normal;
@@ -69,8 +71,10 @@ header > div.nav {
 div.nav > nav {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   transform: rotate(-10deg);
+  flex-wrap: wrap;
+  width: 65%;
 }
 
 div.nav > nav > a {
@@ -329,6 +333,11 @@ div.skills-now > figcaption > img {
   height: 70px;
 }
 
+div.skills-now > figcaption > img:hover {
+  transform: scale(1.3);
+  transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
 div.skills-now > figcaption > h4 {
   font-size: 0.8rem;
 }
@@ -374,6 +383,10 @@ div.skills > section {
 }
 
 @media all and (max-width: 1024px) {
+  body,
+  header {
+    overflow: unset;
+  }
   header {
     height: unset;
     flex-wrap: wrap;
@@ -383,7 +396,7 @@ div.skills > section {
   }
   header > div.name,
   header > div.nav {
-    width: 100%;
+    width: 92%;
     height: unset;
   }
   header > div.nav {
@@ -393,7 +406,6 @@ div.skills > section {
     top: unset;
     right: unset;
     padding: 30px 30px 0 30px;
-    width: 100%;
     gap: 30px;
   }
   div.nav > nav,
@@ -402,7 +414,7 @@ div.skills > section {
     transition: all 0.3s ease-in-out;
   }
   header > div.name {
-    padding: 60px;
+    padding: 60px 0px 60px 60px;
   }
   div.nav > nav {
     display: none;
@@ -415,7 +427,7 @@ div.skills > section {
     gap: 20px;
     flex-direction: column;
     border: 2px solid #fff;
-    padding: 50px 100px;
+    padding: 50px 75px;
   }
   div.nav > div.img {
     display: flex;
@@ -505,4 +517,90 @@ div.form > textarea:focus {
   outline: none;
   border-bottom: 5px solid #000;
   border-left: 5px solid #000;
+}
+
+footer {
+  width: 100%;
+}
+
+div.back-top,
+div.back-top > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-size: 0.9rem;
+  background-color: #1a1a1a;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+div.back-top > a > i {
+  font-size: 0.9rem;
+}
+
+div.back-top > a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+div.sub-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-size: 0.9rem;
+  background-color: #1a1a1a;
+  color: rgb(255, 255, 255);
+}
+
+div.sub-footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+div.sub-footer > div > a > i {
+  font-size: 1.5rem;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 25%;
+}
+
+div.sub-footer > div > a:hover {
+  -webkit-animation: flip-vertical-fwd 0.4s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: flip-vertical-fwd 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+div.sub-footer > div > a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+@-webkit-keyframes flip-vertical-fwd {
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px) rotateY(180deg);
+    transform: translateZ(160px) rotateY(180deg);
+  }
+}
+@keyframes flip-vertical-fwd {
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px) rotateY(180deg);
+    transform: translateZ(160px) rotateY(180deg);
+  }
 }

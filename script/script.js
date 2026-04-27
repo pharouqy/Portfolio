@@ -34,3 +34,7 @@ textareas.forEach((textarea) => {
         label.style.top = "10px";
     });
 });
+
+const date = document.querySelector("#date");
+
+date.innerHTML = new Date().getFullYear();
