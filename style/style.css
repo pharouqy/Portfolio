@@ -725,6 +725,9 @@ div.sub-footer > div > a {
   height: 430px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.4s ease-in-out;
 }
 
 .portfolio-container > article > img {
@@ -766,6 +769,7 @@ div.sub-footer > div > a {
   font-size: 0.9rem;
   color: rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease-in-out;
 }
 
 div.filter > ul > li.active-filter {
@@ -788,6 +792,7 @@ div.portfolio-container > article > .display > p {
   font-size: 1.2rem;
   color: rgb(255, 255, 255);
   margin: 0;
+  text-align: center;
 }
 
 div.portfolio-container > article > .display > .more {
@@ -797,11 +802,22 @@ div.portfolio-container > article > .display > .more {
   gap: 10px;
   padding: 10px;
   font-size: 0.9rem;
-  background-color: #1a1a1a;
-  color: rgb(255, 255, 255);
 }
 
 div.portfolio-container > article > .display > .more > a {
   text-decoration: none;
   color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+  padding: 10px;
+  border-right: 1px solid rgb(255, 255, 255);
+  border-left: 1px solid rgb(255, 255, 255);
+}
+
+div.portfolio-container > article > .display > .more > a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.portfolio-container > article.none-article {
+  display: none;
 }

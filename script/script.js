@@ -38,3 +38,47 @@ textareas.forEach((textarea) => {
 const date = document.querySelector("#date");
 
 date.innerHTML = new Date().getFullYear();
+
+const portfolio = document.querySelector("#portfolio");
+
+const all = document.querySelector("#all");
+const coded = document.querySelector("#coded");
+const designed = document.querySelector("#designed");
+
+portfolio.querySelectorAll(".article").forEach((article) => {
+    article.classList.remove("none-article");
+});
+
+all.addEventListener("click", () => {
+    portfolio.querySelectorAll(".article").forEach((article) => {
+        article.classList.remove("none-article");
+    });
+});
+coded.addEventListener("click", () => {
+    portfolio.querySelectorAll(".article").forEach((article) => {
+        if (article.dataset.category !== "coded") {
+            article.classList.add("none-article");
+        } else {
+            article.classList.remove("none-article");
+        }
+    });
+});
+designed.addEventListener("click", () => {
+    portfolio.querySelectorAll(".article").forEach((article) => {
+        if (article.dataset.category !== "designed") {
+            article.classList.add("none-article");
+        } else {
+            article.classList.remove("none-article");
+        }
+    });
+});
+
+const filters = document.querySelectorAll(".filter > ul > li");
+filters.forEach((filter) => {
+    filter.addEventListener("click", () => {
+        filters.forEach((filter) => {
+            filter.classList.remove("active-filter");
+        });
+        filter.classList.add("active-filter");
+    });
+});
