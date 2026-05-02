@@ -726,7 +726,6 @@ div.sub-footer > div > a {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  margin: 10px;
   transition: all 0.4s ease-in-out;
 }
 
